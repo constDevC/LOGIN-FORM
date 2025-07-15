@@ -2,26 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Login | MyApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Awareness Demo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="login-container">
-    <h1 class="title">Facebook</h1>
-    <form class="login-form" onsubmit="handleEvenDemo(event)">
-      <input type="text" id="email" placeholder="Email or Phone" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <button type="submit">Log In</button>
-      <a href="#" class="forgot">Forgot password?</a>
-      <hr>
-      <button type="button" class="create-btn">Create New Account</button>
-    </form>
+  <div class="demo-container">
+    <div class="intro-section">
+      <h1>Phishing Awareness Demo</h1>
+      <p class="disclaimer">
+        ⚠️ This is a **simulated phishing page** created solely for **cybersecurity awareness**.<br>
+        No real data is collected. Please do not enter sensitive information.
+      </p>
+    </div>
+    <div class="form-section">
+      <form class="demo-form" onsubmit="handleDemoForm(event)">
+        <div class="input-group">
+          <label for="email">Email or Phone:</label>
+          <input type="text" id="email" placeholder="Enter your email or phone" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+        <div class="options">
+          <a href="#" class="forgot">Forgot password?</a>
+          <button type="button" class="create-btn">Create New Account</button>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <p>⚠️ This page is part of an educational project. The data entered here is not saved or transmitted anywhere.</p>
+    </footer>
   </div>
-</body>
-<script>
-    function handleEvenDemo(event) {
+  
+  <script>
+    function handleDemoForm(event) {
       event.preventDefault();
-      window.location.href = "success_warning.html";
+      window.location.href = "success_warning.html";  // Redirect to the warning page
     }
   </script>
+</body>
 </html>
